@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&display=swap");
 
 *{
     padding: 0;
@@ -6,7 +5,7 @@
     box-sizing: border-box;
     list-style: none;
 text-decoration: none;
-font-family: 'Inter', sans-serif;
+font-family: "Inter", sans-serif;
 }
 :root {
     --main-color: #ff8716;
@@ -26,4 +25,104 @@ color: var(--p-color);
 h1,h2,h3,h4,h5,h6{
 color: var(--color-heading);
 font-family: 'DM Sans', sans-serif;
+}
+img{
+    width: 100%;
+}
+input,select,button{
+   border: none;
+   outline: none;
+}
+.container{
+    width: 90%;
+     max-width : 1350px ;
+    margin: auto
+ 
+}
+
+/* header */
+header{
+    background-color: white;
+    position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+}
+header .top_header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+header .top_header .logo{
+    width: 140px;
+}
+header .top_header .search_box{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    background-color: var(--bg-color);
+}
+header .top_header .search_box input{
+    height: 55px;
+    width: 400px;
+    padding: 5px 15px 5px 10px;
+    
+    background-color: var(--bg-color);
+}
+header .top_header .search_box .select_box{
+  position: relative;
+}
+header .top_header .search_box .select_box::after{
+    content: ' ';
+    position: absolute;
+    right: 0;
+    top: 50%;
+     transform: translateY(-50%);
+    width: 1px;
+    height: 50%;
+background-color:  #b9b9b9;
+} 
+header .top_header .search_box select{
+    height: 55px;
+    width: 200px;
+   background: var(--bg-color);
+font-size: 16px;
+cursor: pointer;
+padding-left: 10px;
+padding-right: 10px;    
+}
+header .top_header .search_box button{
+    height: 55px;
+width: 60px;
+background-color: var(--main-color);
+font-size: 18px;
+cursor: pointer;
+}
+header .top_header .search_box button i{
+    color: white;
+}
+header .top_header .header_icons{
+    display: flex;
+    gap: 30px;
+}
+header .top_header .header_icons .icon{
+    position: relative;
+    cursor: pointer;
+}
+header .top_header .header_icons .icon i{
+    font-size: 24px;
+}
+header .top_header .header_icons .icon .count{
+    position:absolute ;
+    top: -10px ;
+    right: -10px;
+    width: 20px; ;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 100%;
 }
