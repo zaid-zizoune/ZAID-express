@@ -7,6 +7,9 @@
 text-decoration: none;
 font-family: "Inter", sans-serif;
 }
+body{
+    padding-top: 180px;
+}
 :root {
     --main-color: #ff8716;
     --p-color: #7b7b7b;
@@ -215,15 +218,6 @@ header .bottom_header .category_nav .category_nav_list a:last-child{
 header .bottom_header .category_nav .category_nav_list a:hover{
 background-color: #d0d0d0;
 }
-
-
-
-
-
-
-
-
-
 header .bottom_header .nav_links {
 display: flex;
 gap: 35px;
@@ -237,3 +231,40 @@ header .bottom_header .nav_links li:hover a{
 
     color: var(--main-color);
 }
+
+ /* slide */
+ .slider{
+    position: relative;
+ }
+ .slider .container{
+    display: flex;
+    justify-content: space-between;
+ }
+  .slider .container .slide_swp{
+    width: 75%;
+    overflow: hidden;
+    position: relative;
+  }
+  .swiper-wrapper {
+    height: auto !important;
+  }
+ .slider .container .slide_swp .swiper-pagination span{
+    background: #fff;
+    opacity: 1;
+ }
+ .swiper-pagination-bullet-active{
+    background: var(--main-color) !important;
+    width: 34px !important;
+    height: 8px !important;
+    border-radius: 30px !important;
+ }
+
+ .slider .banner_2 {
+    width: 23%;
+    height: 100%;
+    object-fit: cover;
+ }
+ .slider .banner_2 a{
+    height: 100%;
+    width: 100%;
+ }
