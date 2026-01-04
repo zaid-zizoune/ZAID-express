@@ -4,14 +4,4 @@ function Open_Categ_list(){
 }
 
 
-  var swiper = new Swiper(".slide_swp", {
-      pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
-        clickable: true,
-      },
-      autoplay: {
-        delay: 3000,
-      },
-      loop:true,
-    });
+ 
