@@ -11,16 +11,17 @@
     });
 
     /*  swiper slide products */
+
+
      var swiper = new Swiper(".slide_product", {
         slidesPerView: 5,
         spaceBetween: 20,
-      pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
-        clickable: true,
-      },
-      autoplay: {
-        delay: 3000,
-      },
-      loop:true,
+        autoplay: {
+          delay: 2500,
+        },
+        navigation:{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
+      loop:true 
     });

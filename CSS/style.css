@@ -72,6 +72,7 @@ header{
    left: 0;
    right: 0;
    box-shadow: 5px 8px 8px #d1d1d13B;
+   z-index: 1000;
 }
 header .top_header .container{
     display: flex;
@@ -321,6 +322,68 @@ header .bottom_header .nav_links li:hover a{
             height: 100%;
             background: transparent;
         }
+          /* start slide */
+        .slide{
+            margin-top: 70px;
+        }
+        .top_slide{
+            position: relative;
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--main-color);
+        }
+        .top_slide h2{
+            position: relative;
+            text-transform: uppercase;
+            background: var(--main-color);
+            color: var(--white-color);
+            font-size: 18px;
+            padding: 10px 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: max-content;
+        }
+        .top_slide h2::before{
+            content: '';
+            position: absolute;
+           width: 0;
+           height: 0;
+           top: 0;
+           z-index: 9;
+           border-left: 20px solid transparent;
+           background: #fff;
+           left: 0;
+           border-bottom: 20px solid #e26e02;
+        }
+        .top_slide h2 i{
+            color: var(--white-color);
+        }
+        .slide .container {
+            position: relative;
+        }
+         .slide .container .mySwiper{
+            padding: 10px 0;
+         }
+         .slide .container .mySwiper .btn_Swip{
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background: var(--bg-color);
+            color: var(--color-heading);
+            font-weight: bold;
+            border-radius: 5px;
+            height: 35px;
+            width: 35px;
+            border: 1px solid var(--border-color);
+         }
+         .slide .container .mySwiper .btn_Swip::after{
+            font-size: 12px;
+         }
+         .slide .container .mySwiper .btn_Swip.swiper-button-prev{
+            left: calc(100% - 80px);
+         }
+
+
 
 
         /* product card style */
@@ -425,7 +488,7 @@ header .bottom_header .nav_links li:hover a{
             align-items: center;
             gap: 5px;
             color: var(--white-color);
-            padding: 5px 10px;
+            padding: 5px 5px;
             cursor: pointer;
             transition: 0.3s;
             border: 1px solid var(--main-color);
@@ -433,14 +496,16 @@ header .bottom_header .nav_links li:hover a{
         .product .icons .btn_add_cart i{
             color: var(--white-color);
         }
-        .product .icons .btn_add_cart .active{
+        .product .icons .btn_add_cart.active{
             color: var(--color-heading);
             background: transparent;
         }
-        .product .icons .btn_add_cart .active i{
+        .product .icons .btn_add_cart.active i{
             color: var(--main-color);
         }
         .product .icons .btn_add_cart:hover{
             scale: 1.05;
             background: #f47600;
         }
+
+      
