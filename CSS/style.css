@@ -508,4 +508,18 @@ header .bottom_header .nav_links li:hover a{
             background: #f47600;
         }
 
-      
+/* banners banners 4 */
+.banners{
+    margin: 50px 0;
+  }
+.banners .banners_boxs{
+display: flex;
+justify-content: space-between;
+}
+    
+.banners .banners_boxs .box{
+        width: 49%;
+    }
+.banners .banners_boxs.banner_3_img .box{
+    width: 32%;
+}
