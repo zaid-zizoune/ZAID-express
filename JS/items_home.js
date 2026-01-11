@@ -43,11 +43,11 @@ fetch ('products.json')
                 <p class="old_price">$${product.old_price}</p>
               </div>
               <div class="icons">
-                <span class="btn_add_cart">
+                <span class="btn_add_cart" data-id='${product.id}'>
                   <i class="fa-solid fa-cart-shopping"></i>add to cart
                 </span>
-                <span class="icon_product"
-                  ><i class="fa-regular fa-heart"></i
+                <span class="icon_product" >
+                  <i class="fa-regular fa-heart"></i
                 ></span>
               </div>
             </div>
@@ -99,7 +99,7 @@ fetch ('products.json')
                 ${old_price_Pargraph}
               </div>
               <div class="icons">
-                <span class="btn_add_cart">
+                 <span class="btn_add_cart" data-id='${product.id}'>
                   <i class="fa-solid fa-cart-shopping"></i>add to cart
                 </span>
                 <span class="icon_product"
@@ -158,7 +158,7 @@ fetch ('products.json')
                 ${old_price_Pargraph}
               </div>
               <div class="icons">
-                <span class="btn_add_cart">
+               <span class="btn_add_cart" data-id='${product.id}'>
                   <i class="fa-solid fa-cart-shopping"></i>add to cart
                 </span>
                 <span class="icon_product"
@@ -217,7 +217,7 @@ fetch ('products.json')
                 ${old_price_Pargraph}
               </div>
               <div class="icons">
-                <span class="btn_add_cart">
+                 <span class="btn_add_cart" data-id='${product.id}'>
                   <i class="fa-solid fa-cart-shopping"></i>add to cart
                 </span>
                 <span class="icon_product"
@@ -238,7 +238,6 @@ fetch ('products.json')
 
         }
 })
-
 
 
 
