@@ -492,6 +492,7 @@ header .bottom_header .nav_links li:hover a{
             cursor: pointer;
             transition: 0.3s;
             border: 1px solid var(--main-color);
+            font-size: 15px;
         }
         .product .icons .btn_add_cart i{
             color: var(--white-color);
@@ -499,6 +500,7 @@ header .bottom_header .nav_links li:hover a{
         .product .icons .btn_add_cart.active{
             color: var(--color-heading);
             background: transparent;
+            pointer-events: none;
         }
         .product .icons .btn_add_cart.active i{
             color: var(--main-color);

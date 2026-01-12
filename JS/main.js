@@ -21,8 +21,11 @@ fetch('products.json')
 
             addToCart(selcetedProduct)
 
-
-
+            const allMatchingButtons = document.querySelectorAll(`.btn_add_cart[data-id='${productId}']`);
+            allMatchingButtons.forEach(btn => {
+                btn.classList.add('active');
+                btn.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>Item in cart`;
+            });
         })
      })
 })
@@ -55,12 +58,41 @@ function updateCart(){
               <button class="Increase_quantity">+</button>
             </div>
           </div>
-<button class="delete_item"><i class="fa-solid fa-trash-can"></i></button>
+<button class="delete_item" data-inex="${index}" ><i class="fa-solid fa-trash-can"></i></button>
         </div>
     `;
 
 
+ })
 
-
-    })
+  const deleteButtons = document.querySelectorAll('.delete_item');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const itemIndex = event.target.closest('button').getAttribute('data-inex');
+            removeFromCart(itemIndex);
+        });
+    });
 }
+
+function removeFromCart(index){
+
+    const cart = JSON.parse(localStorage.getItem('cart')) || []
+
+    const removeProduct = cart.splice(index, 1)[0]
+
+    localStorage.setItem('cart', JSON.stringify(cart))
+    
+    updateCart();
+    updatButtonsState(removeProduct.id);
+}
+
+function updatButtonsState(productId){
+    const allMatchingButtons = document.querySelectorAll(`.btn_add_cart[data-id='${productId}']`);
+    allMatchingButtons.forEach(button => {
+        button.classList.remove('active');
+        button.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>Add to cart`;
+    });
+}
+
+
+updateCart()
