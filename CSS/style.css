@@ -481,6 +481,7 @@ header .bottom_header .nav_links li:hover a{
         }
         .product .icons .icon_product:hover i{
             color: var(--white-color);
+            pointer-events: none;
         }
         .product .icons .btn_add_cart {
             background: var(--main-color);
