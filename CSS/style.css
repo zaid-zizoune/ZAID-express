@@ -481,7 +481,7 @@ header .bottom_header .nav_links li:hover a{
         }
         .product .icons .icon_product:hover i{
             color: var(--white-color);
-            pointer-events: none;
+           
         }
         .product .icons .btn_add_cart {
             background: var(--main-color);
@@ -497,6 +497,7 @@ header .bottom_header .nav_links li:hover a{
         }
         .product .icons .btn_add_cart i{
             color: var(--white-color);
+             pointer-events: none;
         }
         .product .icons .btn_add_cart.active{
             color: var(--color-heading);
@@ -509,6 +510,9 @@ header .bottom_header .nav_links li:hover a{
         .product .icons .btn_add_cart:hover{
             scale: 1.05;
             background: #f47600;
+        }
+        .close_menu, .open_menu{
+            display: none;
         }
 
 /* banners banners 4 */
@@ -749,3 +753,79 @@ footer .bottom_footer .payment_methods{
     background: transparent;
     color: var(--color-heading);
 }
+
+/* start Responsive */
+@media (max-width: 1100px) {
+    header .top_header .container{
+        flex-wrap: wrap;
+    }
+    header .top_header .search_box{
+        order: 3;
+        width: 80%;
+        margin: 20px auto 0;
+    }
+    header .top_header .logo{
+        width: 140px;
+    }
+    header .top_header .search_box select{
+        width: 200px;
+    }
+     header .top_header .search_box input{
+        width: calc(100% - 200px);
+     }
+     header .bottom_header .nav_links{
+        position: fixed;
+        top: 0;
+        left: -400px;
+        bottom: 0;
+        background: white;
+        width: 400px;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        border: 1px solid #b5b5b596;
+        transition: 0.4s ease-in-out;
+
+    }
+    header .bottom_header .nav_links.active{
+        left: 0;
+    }
+    header .bottom_header .nav_links li {
+        font-size: 18px;
+        height: auto;
+    }
+    .close_menu{
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 3px;
+        font-size: 30px;
+    }
+    .open_menu{
+        display: block;
+        font-size: 25px;
+    }
+    .open_menu i{
+        color: var(--main-color);
+        border: 1px solid var(--main-color);
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 3px;
+    }
+    header .bottom_header .category_nav{
+        width: auto;
+    }
+     header .bottom_header .category_nav .category_btn p{
+        font-size: 13;
+        margin: 0 10px;
+     }
+     header  .bottom_header nav{
+        gap: 20px;
+     }
+
+
+
+
+     }

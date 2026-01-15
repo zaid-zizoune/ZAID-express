@@ -3,6 +3,11 @@ function Open_Categ_list(){
     category_nav_list.classList.toggle("active")
 }
 
+let nav_links = document.querySelector(".nav_links");
+function open_Menu(){
+    nav_links.classList.toggle("active")
+}
+
 var cart = document.querySelector('.cart');
 function open_close_cart(){
     cart.classList.toggle('active')
