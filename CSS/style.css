@@ -756,6 +756,9 @@ footer .bottom_footer .payment_methods{
 
 /* start Responsive */
 @media (max-width: 1100px) {
+    body{
+        padding-top: 240px;
+    }
     header .top_header .container{
         flex-wrap: wrap;
     }
@@ -824,8 +827,54 @@ footer .bottom_footer .payment_methods{
      header  .bottom_header nav{
         gap: 20px;
      }
+     .banners_4 .container{
+        flex-wrap: wrap;
+     }
+     .banners_4 .container .box{
+        width: 49%;
+        margin-bottom: 20px;
+        justify-content: space-around;
+     }
+
+     }
+      @media (max-width: 1000px){
+.slider .banner_2{
+    display: none;
+}
+.slider .container .slide_swp{
+ width: 100%;
+}
+.banners_4 .container{
+        flex-wrap: wrap;
+     }
+     .banners_4 .container .box{
+        width: 49%;
+        margin-bottom: 20px;
+       
+     }
 
 
-
-
+      }
+     @media (max-width: 500px){
+        header .top_header .category_nav{
+           display: none;
+        }
+        header .top_header .search_box {
+            width: 100%;
+        }
+        header .top_header .search_box select {
+            width: 140px;
+        }
+        header .top_header .search_box input {
+            width: calc(100% - 140px);
+        }
+        header .bottom_header .nav_links {
+            width: 100%;
+            left: -100%;
+        }
+        .cart {
+            width: 100%;
+            left: -100%;
+        }
+        
      }
