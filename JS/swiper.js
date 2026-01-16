@@ -23,5 +23,19 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev"
         },
-      loop:true
+      loop:true,
+      breakpoints: {
+          1200:{
+            slidesPerView : 5,
+            spaceBetween: 20,
+          },
+           1000:{
+            slidesPerView : 4,
+            spaceBetween: 20,
+          },
+           700:{
+            slidesPerView : 3,
+            spaceBetween: 15,
+          }
+      }
     });
