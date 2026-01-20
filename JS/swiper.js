@@ -36,6 +36,10 @@
            700:{
             slidesPerView : 3,
             spaceBetween: 15,
+          },
+            0:{
+            slidesPerView : 2,
+            spaceBetween: 10,
           }
       }
     });
