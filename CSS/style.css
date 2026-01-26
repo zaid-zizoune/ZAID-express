@@ -1142,7 +1142,7 @@ padding: 15px 20px;
   transition: 0.3s;
 }
 .checkout .input_info .inputs input:focus{
-  border-color: var(--main-color)
+  border-color: var(--main-colorgit )
 }
  
 
