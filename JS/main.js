@@ -48,8 +48,19 @@ function updateCart(){
     const cartItemsContainer = document.getElementById('cart_items');
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const checkout_items = document.getElementById("checkout_items")
+
+    let items_input = document.getElementById("items")
+    let total_price_input = document.getElementById("total_Price")
+    let count_Items_input = document.getElementById("count_Items")
+
     if (checkout_items){
         checkout_items.innerHTML=""
+
+        
+        items_input.value = "";
+        total_price_input.value ="";
+        count_Items_input.value ="";
+
     }
 
     var total_price = 0;
@@ -62,6 +73,13 @@ function updateCart(){
         let total_price_item = item.price * item.quantity;
         total_price += total_price_item
         total_count += item.quantity
+
+
+        // check out inputs
+        items_input.value += item.name + "  ---  " + "price : " + total_price_item + "   ---   " + "count : " + item.quantity + "\n";
+
+        total_price_input.value = total_price + 20
+        count_Items_input.value = total_count
 
 
     cartItemsContainer.innerHTML += 
