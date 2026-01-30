@@ -76,12 +76,13 @@ function updateCart(){
 
 
         // check out inputs
+        if(checkout_items){
         items_input.value += item.name + "  ---  " + "price : " + total_price_item + "   ---   " + "count : " + item.quantity + "\n";
 
         total_price_input.value = total_price + 20
         count_Items_input.value = total_count
 
-
+  }
     cartItemsContainer.innerHTML += 
     `
     <div class="item_cart">
